@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        label{
+            margin-left: 1px;
+        }
+    </style>
+</head>
+<body >
+    <form style="width: 800px; margin: auto;background-color: lightgray;">
+        <fieldset>
+
+            <legend style="text-align: center;">PIZZA ORDER FORM</legend>
+
+            <fieldset >
+
+                <legend>Delivery Address</legend>
+
+                <div style="width:93%;display: flex;justify-content: space-between;">
+                    <span style="float:left">
+                        Full name:   <input type="text" name="fullname" placeholder="Full Name" style="margin-left: 27px;">
+                    </span>
+                 
+                    <span style="float:right">
+                        <label>Street Address:  </label>    
+                        <input type="text" name="street" placeholder="Address" style="margin-left: 19px;">
+                    </span><br><br>
+                    
+                </div>
+
+                <div style="width:94%;display: flex;justify-content: space-between;">
+                    <span style="float:left">
+                        Phone:    <input type="number" name="phone" placeholder="Phone" style="margin-left: 51px;">
+                     
+                    </span>
+                 
+                    <span style="float:right">
+                       <label>E-mail: </label>     
+                       <input type="text" name="email" placeholder="E-mail" style="margin-left: 70px;">
+                    </span><br><br>
+                    
+                </div>
+            
+                Password:    <input type="password" name="password" placeholder="Password" style="margin-left: 30px;"><br><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Information</legend>
+
+                <div style="width:105%;display: flex;justify-content: space-between;">
+                    <span style="float:left">
+                        Card Type:
+                        <select style="margin-left: 30px;">
+                            <option selected> visa </option>
+                            <option> Master card </option>
+                            <option> Discover</option>
+        
+                        </select><br><br>
+                     
+                    </span>
+                 
+                    <span style="float:right">
+                        <label>Card number: </label>
+                        <input type="number" name="cardnumber" placeholder="Card Number" style="margin-left: 35px;">
+                    </span><br><br>
+                    
+                </div>
+ 
+                Name on card:   <input type="text" name="name" placeholder="Name" style="margin-left: 9px;">
+            
+            </fieldset>
+
+            <fieldset>
+                <legend>Customize Your Pizza</legend>
+                <div style="width:83%;display: flex;justify-content: space-between;">
+                    <span style="float:left">
+                        Pizza size: 
+                        <select style="margin-left: 35px;">
+                            <option selected> Large</option>
+                            <option > medium</option>
+                            <option > small</option>
+        
+                        </select>
+                        </select>
+                    </span>
+                 
+                    <span style="float:right">
+                        Quantity:   <input type="number" name="qty"style="margin-left: 35px;">
+                    </span>
+                    
+                </div><br>
+          
+                Spices: 
+                <span style="margin-left: 57px;">    
+                Black Pepper <input type="checkbox"  name="blackpepper" value="blackpepper"  >
+                Bell peppers <input type="checkbox" name="bellpeppers" value="bellpeppers">
+                Mayonise        <input type="checkbox" name="mayonise" value="mayonise">
+
+                </span><br><br>
+
+                <div style="width:80%;display: flex;justify-content: space-between;">
+                    <span style="float:left">
+                        Other Requirement: <textarea name="Requirement" >Any Other     Requirements</textarea>
+                    </span>
+                 
+                    <span style="float:right">
+                        Meat:    
+                        Fish:     <input type="radio"  name="fish" value="fish">
+                        Cow:       <input type="radio"  name="cow" value="cow">
+                        Chicken:    <input type="radio"  name="chicken" value="chicken">
+
+                    </span>
+                    
+                </div>
+                
+            </fieldset><br>
+
+            <button type="button"> clear order</button>
+            <button type="button"> place order</button>
+
+         </fieldset>
+       
+    </form>
+    
+</body>
+</html>

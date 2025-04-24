@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee_Form</title>
+    <style>
+        form{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <form  style="width: 999px; margin: auto;">
+        <fieldset>
+        <hi style="font-size: 34px;"><center><b>Employee Data</b></center></hi>
+
+        <p style="width:130%;display: flex;justify-content: space-between;">
+            <span style="float:left">
+                <label style="margin-left: 35px"><b>Employee ID :</b></label>
+                <input type="text" name="employeeid" placeholder="102" style="width: 40px;">
+            </span>
+         
+            <span style="float:right">
+                <label><b>Birth Date:</b></label>
+                <input type="text"  name="birthdate" placeholder="06/05/1962" style="width: 90px;">
+                </span><br><br>
+            
+        </p>
+
+        <p style="width:140%;display: flex;justify-content: space-between;">
+            <span style="float:left">
+                <label style="margin-left: 35px"><b>Manager ID :</b></label>
+                <input type="text" name="managerid" placeholder="501" style="width: 40px;">
+            </span>
+         
+            <span style="float:right;">
+                <label style="margin-right: 35px"><b>Soc.Sec.No. :</b</label>
+                <input type="text"  name="soc" placeholder="017-34-9033">
+            </span><br><br>
+            
+        </p>
+
+        <p style="width:91%;display: flex;justify-content: space-between;">
+            <span style="float:left">
+                <label><b>Emp.First Name :</b</label>
+                <input type="text" name="fname" placeholder="Fran">
+            </span>
+         
+            <span style="float:right">
+                <label><b>Salary :</b></label>
+                <input type="text"  name="salary" placeholder="$45,700.00">
+            </span><br><br>
+            
+        </p>
+
+        <p style="width:125%;display: flex;justify-content: space-between;">
+            <span style="float:left">
+                <label><b>Emp.Last Name :</b></label>
+                <input type="text" name="lname" placeholder="Whitney">
+            </span>
+         
+            <span style="float:right">
+                <label style="margin-right: 2px">Start Date :</label>
+                <input type="text"  name="startdate" placeholder="02/26/1990">
+            </span><br><br>
+            
+        </p>
+
+        <p style="width:132%;display: flex;justify-content: space-between;">
+            <span style="float:left">
+                <label style="margin-left: 10px;" ><b>Department ID :</b></label>
+                <input type="text" name="depId" placeholder="100" style="width: 50px;">
+            </span>
+         
+            <span style="float:right">
+                <label><b>Termination Date :</b></label>
+                <input type="text"  name="terminationdate" value="00/00/0000">
+            </span><br><br>
+        </p>
+
+        <p style="width:120%;display: flex;justify-content: space-between;">
+            <span style="float:left">
+                 <label style="margin-left: 69px;"><b>Street :</b></label>
+                 <input type="text" name="street" placeholder="49 EastWashington Street" ><br><br>
+                 <label style="margin-left: 80px;"><b>City :</b></label>
+                 <input type="text" name="city" placeholder="Needham" style="width: 90px;"><br><br>
+                 <label style="margin-left: 75px;"><b>State :</b></label>
+                 <input type="text" name="state" placeholder="MA">
+            </span>
+         
+            <span style="float:right">
+                <b>Status :</b><input type="radio"  name="active" value="status" checked>Active<br>
+                <input type="radio"  name="terminated" value="status" style="margin-left: 57px;">Terminated<br>
+                <input type="radio"  name="onleave" value="status" style="margin-left: 57px;">On leave<br>
+           
+            </span><br><br>
+        </p>
+
+        <p style="width:104%;display: flex;justify-content: space-between;">
+            <span style="float:left">
+                <label style="margin-left: 47px;"><b>Zip Code  :</b></label>
+                <input type="text" name="state" placeholder="02192-"><br><br>
+
+                <label style="margin-left: 70px;"><b>Phone  :</b></label>
+                <input type="number" name="state" placeholder="(617) 555-3985"><br><br>
+                
+                <label style="margin-left: 90px;"><b>Sex :</b><label>
+                
+                <input type="radio"  name="sex" value="male" ><b>Male</b><br>
+        
+                
+                <input type="radio"  name="sex" value="female" style="margin-left: 130px;" checked><b>Female</b><br><br>
+         
+            </span>
+         
+            <span style="float:right">
+                <label><b>Health Insurance</b></label>
+                <input type="checkbox" name="healthinsurance" checked><br>
+        
+                <label style="margin-left: 20px;"><b>Life Insurance</b></label>
+                <input type="checkbox" name="lifeinsurance" checked><br>
+        
+                <label style="margin-left: 54px;"><b>Day Care</b></label>
+                <input type="checkbox" name="day care">
+            </span><br><br>
+        </p>
+
+    </fieldset>
+    </form>
+    
+</body>
+</html>
