@@ -1,0 +1,108 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .sidebar {
+    height: 100vh;
+    background-color: #0d2149;
+    padding-top: 20px;
+    position: fixed;
+    width: 220px;
+    color: white;
+  }
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+  }
+  .sidebar a:hover {
+    background-color: #1c3d73;
+  }
+  .main-content {
+    margin-left: 220px;
+    padding: 20px;
+  }
+  .navbar {
+    margin-left: 220px;
+    background-color: white;
+    border-bottom: 2px solid orange;
+  }
+  .admin-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .footer {
+    margin-left: 220px;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+  /* Add these to your existing CSS */
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #0d2149;
+}
+
+#userForm {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}/* Student Form Styling */
+#studentForm {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-check-input:checked {
+  background-color: #0d2149;
+  border-color: #0d2149;
+}
+
+/* Table Actions */
+.btn-success {
+  min-width: 80px;
+}
+/* Allocation Form Styling */
+#allocationForm {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Filter controls */
+.form-select {
+  max-width: 200px;
+}
+
+/* Action buttons spacing */
+.btn-success {
+  margin-left: 5px;
+}
+.form-control[readonly] {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+#uploadForm table input {
+  max-width: 150px;
+}
+
+#editForm {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
