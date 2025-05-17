@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+
+</head>
+<body>
+    <script>
+        function Circle(radius){
+            this.radius = radius;
+            this.getArea=function(){
+            area = Math.PI*radius**2;
+            console.log(area);
+            return area;
+            }
+
+            this.getPerimeter=function(){
+            per = 2*Math.PI*radius;
+            console.log(per);
+            return per;
+            }       
+        }
+
+         /* to display in console*/
+        let circy = new Circle(11);
+        circy.getArea();
+
+        /* to display in browser
+        document.write(circy.getArea() + "<br>");*/
+
+         /* to display in console*/
+        let circy2 = new Circle(4.44);
+        circy2.getPerimeter();
+
+        /* to display in browser
+         document.write(circy2.getPerimeter());*/
+
+
+        
+        
+    </script>
+
+    
+</body>
+</html>

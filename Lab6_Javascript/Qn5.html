@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendMessage</title>
+
+    <style>
+ 
+        form{
+            background-color: lightgrey;
+            width: 500px; 
+            margin-left: 30%;
+        }
+        button{
+            background-color: black;
+            color: white;
+            text-align: center;
+            width: 98%;
+            height: 40px;
+            border-radius: 10px;
+        }
+        input {
+            width: 99%;
+            height: 20px;
+        }
+        textarea{
+            width: 99%;
+            height: 40px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <form id="form">
+        <div id="errorBox"></div>
+        <fieldset>
+
+            <p>Send Message</p>
+            <label>Name :</label><br><br>
+            <input type="text" id="name" value=""><br><br>
+
+            <label>Email :</label><br>
+            <input type="email" id="email" value=""><br><br>
+
+            <label>Message :</label><br><br>
+            <textarea id="message"></textarea><br><br>
+
+            <button>Send Message</button>
+
+
+
+        </fieldset>
+</form>
+<script>
+    const form = document.getElementById('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const errorBox = document.getElementById('errorBox');
+
+    function submit(e) {
+      e.preventDefault();
+
+      errorBox.innerHTML = "";
+      nameInput.classList.remove("error");
+      emailInput.classList.remove("error");
+      messageInput.classList.remove("error");
+
+      let hasError = false;
+      let errorMessages = "";
+
+      if (nameInput.value.trim() === "") {
+        hasError = true;
+        errorMessages += "<p>Please enter your name.</p>";
+        nameInput.classList.add("error");
+      }
+
+      if (emailInput.value.trim() === "") {
+        hasError = true;
+        errorMessages += "<p>Please enter your email.</p>";
+        emailInput.classList.add("error");
+      }
+
+      if (messageInput.value.trim() === "") {
+        hasError = true;
+        errorMessages += "<p>Please enter your message.</p>";
+        messageInput.classList.add("error");
+      }
+
+      if (hasError) {
+        errorBox.innerHTML = `<div class="error-message">${errorMessages}</div>`;
+        setTimeout(() => {
+          errorBox.innerHTML = "";
+          nameInput.classList.remove("error");
+          emailInput.classList.remove("error");
+          messageInput.classList.remove("error");
+        }, 4000);
+        return;
+      }
+
+      const formData = {
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value
+      };
+
+      console.log("Form Data:", formData);
+      alert("Message ready to be sent!");
+
+    }
+
+    form.addEventListener('submit', submit);
+  </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaForm</title>
+    
+</head>
+<body>
+    <form style="width: 800px; margin: auto;background-color: lightgray;">
+    <fieldset>
+        <legend style="text-align: center;">PIZZA ORDER FORM</legend>
+
+        <fieldset>
+            <legend>Delivery Address</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label>Full Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                        <label>Phone:</label><br><br>
+                        <label">Password:</label>
+                    </td>
+
+                    <td>
+                        <input type="text" placeholder="Full Name"  id="fullname"><br><br>
+                        <input type="tel" name="phone" placeholder="Phone"  id="phone"><br><br>
+                        <input type="password" name="password" placeholder="Password"  id="password">
+                    </td>
+
+                    <td>
+                        &nbsp;&nbsp;&nbsp;<label>Street Address:</label>&nbsp;&nbsp;&nbsp;<br><br>
+                        &nbsp;&nbsp;&nbsp;<label>Email:</label><br><br><br><br>
+                    </td>
+
+                    <td>
+                        <input type="text" placeholder="Street Address"  id="address"><br><br>
+                        <input type="email" placeholder="Email"  id="emails"><br><br><br><br>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment Information</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label>Card Type:</label><br><br>
+                        <label>Name on Card:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                    </td>
+                    <td>
+                        <select name="card" id="cardtype">
+                            <option value="Visa">Visa</option>
+                            <option value="Mastercard">Mastercard</option>
+                            <option value="Discover">Discover</option>
+                        </select><br><br>
+                        <input type="text" placeholder="Name"  id="nameoncard">
+                    </td>
+                    <td>
+                        &nbsp;&nbsp;&nbsp;<label>Card Number:</label><br><br><br>
+                    </td>
+                    <td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<input type="Number" name="Cardnumber" placeholder="Card Number"  id="cardnumber"><br><br><br>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Customize Your Pizza</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label>Pizza size:</label><br><br>
+                        <label>Spices</label><br><br>
+                        <label>Other Requirement</label><br><br><br><br>
+                    </td>
+
+                    <td>
+                        <select name="" id="pizzasize">
+                            <option value="large">large</option>
+                            <option value="medium">medium</option>
+                            <option value="small">small</option>
+                        </select><br><br>
+                        <label for="">Black pepper</label>
+                        <input type="checkbox" name="spices"  id="blackpepper"><br><br>
+                        <textarea name="" id="" cols="22" rows="4" placeholder="Any other      Requirement" id="other"></textarea>
+
+
+                    </td>
+
+                    <td>
+                        <label>Quantites:</label><br><br>
+                        <label>Bell pepper</label>
+                        <input type="checkbox" name="spices"  id="bellpepper"><br><br>
+                        <label>Meat</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label>Fish</label>
+                        <input type="radio" name="meat"  id="fish"><br><br><br><br>
+                    </td>
+
+                    <td>
+                        <input type="number" id="quantities"><br><br>
+                        <label>Mayonnaise</label>
+                        <input type="checkbox" name="spices"  id="mayonnaise"><br><br>
+                        <label>Cow</label>
+                        <input type="radio" name="meat"  id="cow">
+                        <label>Chicken</label>
+                        <input type="radio" name="meat"   id="chicken"><br><br><br><br>
+
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Clear Order">
+        <input type="submit" value="Place Order" onclick="return Submit()">
+    </fieldset>
+</form>
+
+<script>
+    function Submit(){
+        msg = "";
+        nom = 0;
+
+      if(!fullname()){
+        nom ++;
+        msg += nom+". Please enter your  fullname\n";
+      }
+      if(!address()){
+        nom ++;
+        msg += nom +". Please enter your address\n";
+      }
+
+      if(!password()){
+        nom ++;
+        msg += nom +". Please enter a password at least 5 characters\n";
+      }
+      if(!phonenumber()){
+        nom ++;
+        msg += nom +". Please enter phonenumber with 10 digit\n";
+      }
+
+      if(!spice()){
+        nom ++;
+        msg += nom +". Please select at least one spice\n";
+      }
+
+      if(!meat()){
+        nom ++;
+        msg += nom +". Please select at least one meat\n";
+      }
+      if(!cardname()){
+        nom ++;
+        msg += nom +". Please enter your card name\n";
+      }
+      if(!cardnumber()){
+        nom ++;
+        msg += nom +". Please enter your card number\n";
+      }
+      if(!email()){
+        nom ++;
+        msg += nom +". Invalid email\n";
+      }
+      if(!pizzasize()){
+        nom ++;
+        msg += nom +". Please select pizza size\n";
+      }
+      if(!quantitypizza()){
+        nom ++;
+        msg += nom +". Please enter quantities of pizza\n";
+      }
+      if(!cardtypes()){
+        nom ++;
+        msg += nom +". Please select card type\n";
+      }
+      if(fullname() && phonenumber() && address() && password() && spice() && cardname() && cardnumber() && pizzasize() && meat() && quantitypizza() && email() && cardtypes()){
+        return true
+      }
+      else{
+        alert(msg);
+        return false;
+      }
+    
+    }
+
+    function fullname(){
+        valid = true;
+        fname = (document.getElementById("fullname").value).split(" ");
+        if(fname.length == 3){
+            for(name of fname){
+                if(name.length < 3){
+                    valid = false;
+                }
+            }
+        }
+        else{
+            valid = false;
+        }
+    
+        return valid;
+    } 
+    function address(){
+        addressData = document.getElementById("address");
+        if(addressData.value){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    function password(){
+        passwordData = document.getElementById("password");
+        if(passwordData.value.length >= 5 && passwordData.value.length < 15){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    function cardtypes(){
+        cardtypesData = document.getElementById("cardtype");
+        if(cardtypesData.value){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    function phonenumber(){
+        const pattern = /^[0-9]{10}$/;
+        phoneData = document.getElementById("phone");
+        if(pattern.test(phoneData.value.trim())){
+         return true;
+        }
+        else{
+            return false;
+        }
+    }
+   
+    function cardnumber(){
+        cardnumberData = document.getElementById("cardnumber");
+        if(cardnumberData.value){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    function cardname(){
+        cardnameData = document.getElementById("nameoncard");
+        if(cardnameData.value){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    function spice(){
+        valid = false;
+        spiceData = document.getElementsByName("spices");
+        for(sp of spiceData){
+            if(sp.checked){
+                valid = true;
+            }
+        }
+        return valid;
+    }
+    function meat(){
+        valid = false;
+        meatData = document.getElementsByName("meat");
+        for(sp of meatData){
+            if(sp.checked){
+                valid = true;
+            }
+        }
+        return valid;
+    }
+    function pizzasize(){
+        pizzasizeData = document.getElementById("pizzasize");
+        if(pizzasizeData.value){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    function quantitypizza(){
+        quantitypizzaData = document.getElementById("quantities");
+        if(quantitypizzaData.value > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    function email(){
+        emails = document.getElementById("emails").value;
+       vd1 = document.getElementById("emails").value.split("@");
+     
+        if(vd1[0] && vd1[1] && emails.endsWith(".com")){
+            vd2 = vd1[1].split(".");
+            if(vd2[0].length > 0){
+                return true;
+            }
+        }
+        else{
+            return false;
+        }
+
+    }
+</script>
+</body>
+</html>

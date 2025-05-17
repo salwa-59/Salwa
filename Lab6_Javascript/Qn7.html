@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PercentageOfWorld</title>
+</head>
+<body>
+
+    <script>
+        function percentageOfWorld1(population){
+            return (population / 7900) * 100; 
+        }
+
+        let China = percentageOfWorld1(1441);
+        let Tanzania = percentageOfWorld1(3000);
+        let Italy = percentageOfWorld1(6000);
+        console.log(China,Tanzania,Italy);
+
+        const percentageOfWorld2 = function(population){
+            return (population / 7900) * 100;
+        }
+
+        China = percentageOfWorld2(1441);
+        Tanzania = percentageOfWorld2(3000);
+        Italy = percentageOfWorld2(6000);
+        console.log(China,Tanzania,Italy);
+
+        const percentageOfWorld3 = population=>{
+            return (population / 7900) * 100;
+        } 
+        
+        China = percentageOfWorld3(1441);
+        Tanzania = percentageOfWorld3(3000);
+        Italy = percentageOfWorld3(6000);
+        console.log(China,Tanzania,Italy);
+        
+    </script>
+    
+</body>
+</html>
