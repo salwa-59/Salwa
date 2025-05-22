@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dataTables.dataTables.min.css">
+    <style>
+        .topbar{
+            background-color: slategray;
+            padding: 10px;
+            
+        }
+        .main-content{
+            background-color: aliceblue;
+            height:80vh;
+        }
+        .footer{
+            background-color: slategray;
+            text-align: center;
+        
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="topbar">
+                <label>library System</label>
+                <a href="">Manage users</a>
+                <a href="">Manage book</a>
+                <a href="">Manage member</a>
+                <a href="">Book insuance</a>
+                <a href="">Manage Returns</a>
+                <a href="">Reports</a>
+                
+              
+                <label class="dropdown" style="float: right;">account</label>
+                
+                
+            </div><br><br>
+
+                        
+                
+            <div class="main-content">
+                <div class="float">
+                <h4 style="float: left;">Manage Users</h4>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal" style="float: right;">+ Add New User</button>
+            </div><br>
+              
+                <table id="Table" class="table table-bordered table-striped">
+                  <thead class="table-dark">
+                    <tr>
+                      <th>Name</th>
+                      <th>ID</th>
+                      <th>Phone </th>
+                      <th>Email</th>
+                      <th>Edit</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Jane doe</td>
+                      <td>MEM001</td>
+                      <td>123-456-7890</td>
+                      <td>jane@example.com</td>
+                      <td><button class="btn btn-success btn-sm">Edit</button></td>
+                      <td><button class="btn btn-danger ">Delete</button></td>
+                     
+                    </tr>
+                  </tbody>
+
+                  <tbody>
+                    <tr>
+                      <td>John smith</td>
+                      <td>MEM002</td>
+                      <td>987-654-3210</td>
+                      <td>john@example.com</td>
+                      <td><button class="btn btn-success btn-sm">Edit</button></td>
+                      <td><button class="btn btn-danger ">Delete</button></td>
+                     
+                    </tr>
+                  </tbody>
+                </table>
+     
+            </div>
+           
+
+            <div class="footer">
+                <p>2025 Library Management System. All Rights Reserved</p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

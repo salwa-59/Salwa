@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Issuance</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dataTables.dataTables.min.css">
+    <style>
+        .topbar{
+            background-color: slategray;
+            padding: 10px;
+            
+        }
+        .main-content{
+            background-color: aliceblue;
+            height:80vh;
+        }
+        .footer{
+            background-color: slategray;
+            text-align: center;
+        
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="topbar">
+                <label>library System</label>
+                <a href="">Manage users</a>
+                <a href="">Manage book</a>
+                <a href="">Manage member</a>
+                <a href="">Book insuance</a>
+                <a href="">Manage Returns</a>
+                <a href="">Reports</a>
+                
+              
+                <label class="dropdown" style="float: right;">account</label>
+                
+                
+            </div><br><br>
+
+                        
+                
+            <div class="main-content">
+                <div class="float">
+                <h4 style="float: left;">Issued Books</h4>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal" style="float: right;">+ Add New User</button>
+            </div><br>
+              
+                <table id="Table" class="table table-bordered table-striped">
+                  <thead class="table-dark">
+                    <tr>
+                      <th>Book title</th>
+                      <th>Member name</th>
+                      <th>2025- </th>
+                      <th>Return Date</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Clean Code</td>
+                      <td>Jane Doe</td>
+                      <td>2025-05-10</td>
+                      <td>2025-05-24</td>
+                      <td>Returned</td>
+                      <td>2025-05-24</td>
+                      <td><button class="btn btn-success btn-sm">Update</button></td>
+                    
+                    </tr>
+                  </tbody>
+
+                  <tbody>
+                    <tr>
+                      <td>Introduction to  Algorithm</td>
+                      <td>John Smith</td>
+                      <td>2025-05-15</td>
+                      <td>2025-05-29</td>
+                      <td>issued</td>
+                      <td>2025-05-24</td>
+                      <td><button class="btn btn-success btn-sm">update</button></td>
+                   
+                    </tr>
+                  </tbody>
+
+
+                </table>
+     
+            </div>
+           
+
+            <div class="footer">
+                <p>2025 Library Management System. All Rights Reserved</p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
